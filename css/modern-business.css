@@ -48,3 +48,9 @@ body {
 .bg-Pelayitos {
   background-color: #D37A0F !important;
 }
+
+.pelayitosTitle{
+  color: #D37A0F;
+  text-align: center;
+  padding-top: 20px;
+}

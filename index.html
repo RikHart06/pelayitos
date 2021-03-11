@@ -34,7 +34,7 @@
     <div class="container">
       <!--<a class="navbar-brand" href="index.html">Pelayitos</a>-->
       <a class="navbar" href="index.html">
-      <img src="img/logoName.png" class="img-fluid" style="width: 180px;" alt="Logo Pelayitos" >
+        <img src="img/logoName.png" class="img-fluid" style="width: 180px;" alt="Logo Pelayitos" >
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,8 +45,12 @@
             <a class="nav-link" href="index.html#nosotros">Nosotros</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="index.html#contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="gallery.html">Galería</a>
-          <li class="nav-item dropdown">
+          </li>
+          <!--<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               ¿Quitar? -  Blogs
             </a>
@@ -55,7 +59,7 @@
               <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
               <a class="dropdown-item" href="blog-post.html">Blog Post</a>
             </div>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a class="nav-link fab fa-facebook socialMediaIcons" href="https://www.facebook.com/PelayitosRH" target="_blank"></a>
           </li>
@@ -161,7 +165,7 @@
     <!--Nosotros-->
 
     <!-- Contacto -->
-    <div class="row">
+    <div class="row" id="contacto">
       <div class="col-lg-2"></div>
       <div class="col-lg-4 mb-4">
       <h3>¡Contáctanos!</h3>
@@ -186,10 +190,14 @@
     </div>
 
     <div class="col-lg-4">
-      <video class="img-fluid" controls>
+    <!--<video class="img-fluid" controls>
         <source src="img/pas3lec.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
-      </video>
+      </video>-->
+      <div class="embed-responsive embed-responsive-16by9"> 
+        <!--<iframe src="imagenes/pas.mp4" title="YouTube video" allowfullscreen></iframe>-->
+        <iframe src="img/pas3lec.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
     </div>
    </div>
   
@@ -204,7 +212,6 @@
           <br>Mándanos un mensaje, con gusto te atenderemos.  </p>
       </div>
       <div class="col-md-4">
-        
           <a class="btn btn-lg btn-secondary-WA btn-block"  href="https://api.whatsapp.com/send?phone=528116621858" target="_blank"><h6 class="fab fa-whatsapp socialMediaIcons"></h6> WhatsApp</a>
       </div>
       <div class="col-md-2"></div>
