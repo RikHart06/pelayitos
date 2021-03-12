@@ -18,16 +18,17 @@
 	text-align: center;
 }
 .gallery-item .content-gallery h3 { 
-	  color: #b10021;
-	  font-size: 16px;
-	  font-weight: 300;
-	  margin-top: 5px;
-	  padding-bottom: 5px;
-	  display: inline-block;
+	color: #b10021;
+	font-size: 16px;
+	font-weight: 300;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	display: inline-block;
 }
 .gallery-item img { 
  width: 100%;
 }
+
 .gallery-item .overlay { 
   position: absolute;
   top: 30px;
@@ -55,3 +56,22 @@
   margin-left: -16px;
   font-size: 24px;
 }
+.gallery-caption {
+  position: absolute;
+  right: 10%;
+  bottom: 10px;
+  left: 10%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: left;
+}
+.gallery-desc {
+  position: relative;
+  bottom: 10px;
+  font-size: 13px;
+  font-style: italic;
+
+}
+

@@ -36,7 +36,32 @@
 </head>
 
 <body>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v10.0'
+      });
+    };
 
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat"
+    attribution="setup_tool"
+    page_id="478013955935762"
+  logged_in_greeting="Hola! Cómo te puedo ayudar?"
+  logged_out_greeting="Hola! Cómo te puedo ayudar?">
+  </div>
+  
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
@@ -50,13 +75,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html#nosotros">Nosotros</a>
+            <a class="nav-link js-scroll-trigger" href="index.html#nosotros">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#contacto">Contacto</a>
+            <a class="nav-link js-scroll-trigger" href="index.html#contacto">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Galería</a>
+            <a class="nav-link js-scroll-trigger" href="gallery.html">Galería</a>
           </li>
           <!--<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,24 +109,36 @@
       <div class="row templatemo_portfolio">
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-                <img src="img/gallery/bunuelos.jpg" alt="gallery 1">
+                <img src="img/gallery/bunuelos.jpg" alt="Buñuelos">
                 <div class="overlay">
+                  <div class="gallery-caption">
+                    <h5>Buñuelos de viento</h5>
+                    <p class="gallery-desc">De vainilla o chocolate</p>
+                  </div>
                   <a href="img/gallery/bunuelos.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
                 </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/carlotas.jpg" alt="gallery 2">
+            <img src="img/gallery/carlotas.jpg" alt="Carlotas">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Carlotas</h5>
+                <p class="gallery-desc">También conocida como postre de limón</p>
+              </div>
               <a href="img/gallery/carlotas.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/empa01.jpg" alt="gallery 3">
+            <img src="img/gallery/empa01.jpg" alt="Empanadas">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Empanadas dulces</h5>
+                <p class="gallery-desc">De queso crema, cajeta, mermelada de fresa</p>
+              </div>
               <a href="img/gallery/empa01.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
@@ -110,14 +147,22 @@
           <div class="gallery-item">
             <img src="img/gallery/empa02.jpg" alt="gallery 4">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Empanadas dulces</h5>
+                <p class="gallery-desc">De queso crema, cajeta, mermelada de fresa</p>
+              </div>
               <a href="img/gallery/empa02.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/galle01.jpg" alt="gallery 5">
+            <img src="img/gallery/galle01.jpg" alt="Galletas Chocochips">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Galletas de Chocochips</h5>
+                <p class="gallery-desc">Con muchas chispas y nuez</p>
+              </div>
               <a href="img/gallery/galle01.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
@@ -126,70 +171,94 @@
           <div class="gallery-item">
             <img src="img/gallery/galle02.jpg" alt="gallery 6">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Galletas de Chocochips</h5>
+                <p class="gallery-desc">Con muchas chispas y nuez</p>
+              </div>
               <a href="img/gallery/galle02.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/empa01.jpg" alt="gallery 7">
+            <img src="img/gallery/pandem01.jpg" alt="Pan de Muerto">
             <div class="overlay">
-              <a href="img/gallery/empa01.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <div class="gallery-item">
-            <img src="img/gallery/pandem01.jpg" alt="gallery 8">
-            <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Pan de Muerto</h5>
+                <p class="gallery-desc">Receta tradicional de Nogales, Veracruz. Un gran sabor a canela</p>
+              </div>
               <a href="img/gallery/pandem01.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/pandem02.jpg" alt="gallery 9">
+            <img src="img/gallery/pandem02.jpg" alt="Pan de Muerto">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Pan de Muerto</h5>
+                <p class="gallery-desc">Receta tradicional de Nogales, Veracruz. Un gran sabor a canela</p>
+              </div>
               <a href="img/gallery/pandem02.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/pastel3l.jpg" alt="gallery 1">
+            <img src="img/gallery/pastel3l.jpg" alt="Pastel de 3 leches">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Pastel de Tres leches</h5>
+                <p class="gallery-desc">Postrecito tradicional de tres Leches</p>
+              </div>
               <a href="img/gallery/pastel3l.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/pay.jpg" alt="gallery 1">
+            <img src="img/gallery/pay.jpg" alt="Pay de Manzana">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Tarta de manzana</h5>
+                <p class="gallery-desc">En tamaño mini, con nuez y canela</p>
+              </div>
               <a href="img/gallery/pay.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/payman.jpg" alt="gallery 1">
+            <img src="img/gallery/payman.jpg" alt="Pay de manzana familiar">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Tarta de manzana</h5>
+                <p class="gallery-desc">En tamaño familiar, con nuez y canela</p>
+              </div>
               <a href="img/gallery/payman.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/payman2.jpg" alt="gallery 1">
+            <img src="img/gallery/payman2.jpg" alt="Pay de manzana diseños">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Tartas de frutas</h5>
+                <p class="gallery-desc">Diseño entretejado, manzana, piña, frutos rojos</p>
+              </div>
               <a href="img/gallery/payman2.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="gallery-item">
-            <img src="img/gallery/payqueso.jpg" alt="gallery 1">
+            <img src="img/gallery/payqueso.jpg" alt="Pay de queso">
             <div class="overlay">
+              <div class="gallery-caption">
+                <h5>Pay de Queso</h5>
+                <p class="gallery-desc">Tradicional pay de queso</p>
+              </div>
               <a href="img/gallery/payqueso.jpg" data-rel="lightbox" class="fa fa-arrows-alt"></a>
             </div>
           </div>
@@ -218,7 +287,7 @@
   <!-- Footer -->
   <footer class="py-3 bg-Pelayitos">
     <div class="container">
-     <!--<p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>--> 
+      <p class="m-0 text-center text-white font-italic">By Rik Hart</p>
     </div>
    </footer>
  <!-- /.container -->
@@ -226,6 +295,10 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scrollTrigger.js"></script>
   
 
 

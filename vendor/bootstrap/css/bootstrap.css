@@ -6611,6 +6611,7 @@ a.close.disabled {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
+  text-shadow: 2px 2px 8px #000;
   text-align: center;
 }
 
